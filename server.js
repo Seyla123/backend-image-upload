@@ -103,6 +103,9 @@ app.get('/images', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+})
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
